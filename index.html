@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Boids — flocking simulation</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <div class="panel" id="panel">
+    <h1>BOIDS</h1>
+    <p class="lead">Emergent flocking from three simple rules.</p>
+
+    <label>Boids <span id="nVal">220</span>
+      <input id="n" type="range" min="20" max="600" step="10" value="220" />
+    </label>
+    <label>Separation <span id="sepVal">1.6</span>
+      <input id="sep" type="range" min="0" max="40" value="16" />
+    </label>
+    <label>Alignment <span id="aliVal">1.0</span>
+      <input id="ali" type="range" min="0" max="40" value="10" />
+    </label>
+    <label>Cohesion <span id="cohVal">1.0</span>
+      <input id="coh" type="range" min="0" max="40" value="10" />
+    </label>
+    <label>Vision <span id="visVal">60</span>
+      <input id="vis" type="range" min="20" max="140" value="60" />
+    </label>
+
+    <div class="seg">
+      <span>Cursor</span>
+      <button data-mode="attract" class="on">Attract</button>
+      <button data-mode="repel">Repel</button>
+      <button data-mode="off">Off</button>
+    </div>
+
+    <label class="row"><input id="trails" type="checkbox" /> Trails</label>
+
+    <p class="hint"><b>H</b> hide panel &middot; move mouse to herd the flock.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
