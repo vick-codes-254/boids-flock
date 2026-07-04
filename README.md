@@ -2,21 +2,29 @@
 
 An interactive implementation of Craig Reynolds' classic [**Boids**](https://en.wikipedia.org/wiki/Boids) algorithm. Hundreds of simple agents follow just three local rules and produce lifelike, emergent flocking — murmurations that swirl, split, and re-form in real time.
 
-![tech](https://img.shields.io/badge/Canvas-2D-59a8ff) ![deps](https://img.shields.io/badge/dependencies-none-5ff0d0) ![license](https://img.shields.io/badge/license-MIT-yellow)
+![version](https://img.shields.io/badge/version-1.1.0-blue) ![tech](https://img.shields.io/badge/Canvas-2D-59a8ff) ![deps](https://img.shields.io/badge/dependencies-none-5ff0d0) ![license](https://img.shields.io/badge/license-MIT-yellow)
 
 ## Features
 - The **three rules** — Separation, Alignment, Cohesion — each on a live slider so you can watch the flock's personality change
 - **Cursor herding** — attract or repel the flock with your mouse
-- **Spatial-hash grid** for neighbor lookups → smooth with 600+ boids
-- Velocity-tinted, glowing agents + optional motion **trails**
+- **Predator mode** — unleash a hawk that hunts the flock; boids flee and scatter. It can chase the cursor or roam and stalk the nearest boid
+- **Obstacles** — click anywhere to drop a circular obstacle the flock steers around; clear them all with one button
+- **Color modes** — Velocity (hue by heading), Rainbow (per-boid tints), or Mono
+- **Live readout** — on-screen FPS and current boid count
+- **Spatial-hash grid** for neighbor lookups so it stays smooth with 600+ boids
+- Glowing agents over a subtle gradient backdrop, plus optional motion **trails**
 - Toroidal world (boids wrap around the edges)
 
 ## Controls
 | Input | Action |
 |-------|--------|
-| Sliders | Tune the flocking rules & vision radius |
+| Sliders | Tune the flocking rules and vision radius |
 | Attract / Repel / Off | Cursor behavior |
-| Mouse | Herd the flock |
+| Predator: Off / Cursor / Roam | Toggle the hawk and choose how it hunts |
+| Color: Velocity / Rainbow / Mono | Choose how boids are colored |
+| Clear obstacles | Remove all placed obstacles |
+| Mouse move | Herd the flock |
+| Mouse click | Drop a circular obstacle |
 | `H` | Hide / show the panel |
 
 ## The rules

@@ -9,6 +9,11 @@
 <body>
   <canvas id="c"></canvas>
 
+  <div class="readout" id="readout">
+    <span><b id="fpsVal">60</b> fps</span>
+    <span><b id="countVal">220</b> boids</span>
+  </div>
+
   <div class="panel" id="panel">
     <h1>BOIDS</h1>
     <p class="lead">Emergent flocking from three simple rules.</p>
@@ -36,9 +41,25 @@
       <button data-mode="off">Off</button>
     </div>
 
+    <div class="seg">
+      <span>Predator</span>
+      <button data-pred="off" class="on">Off</button>
+      <button data-pred="cursor">Cursor</button>
+      <button data-pred="roam">Roam</button>
+    </div>
+
+    <div class="seg">
+      <span>Color</span>
+      <button data-color="velocity" class="on">Velocity</button>
+      <button data-color="rainbow">Rainbow</button>
+      <button data-color="mono">Mono</button>
+    </div>
+
     <label class="row"><input id="trails" type="checkbox" /> Trails</label>
 
-    <p class="hint"><b>H</b> hide panel &middot; move mouse to herd the flock.</p>
+    <button id="clearObs" class="wide">Clear obstacles</button>
+
+    <p class="hint"><b>H</b> hide panel &middot; move mouse to herd &middot; click to drop an obstacle.</p>
   </div>
   <script src="script.js"></script>
 </body>
